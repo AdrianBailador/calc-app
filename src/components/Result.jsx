@@ -2,16 +2,17 @@ import React from "react";
 import { PropTypes } from "prop-types";
 
 // Componente Funcional
-const Result = ({value}) => {
+const Result = ({value}) => 
+//{
     //const {value} = props;
-    debugger
-    console.log("Renderización de Result", value)
-    return(
+    //return
+    (
         <div className="result">
             {value}
         </div>
     )
-}
+//}
+
 
 PropTypes = {
     value: PropTypes.string.isRequired
