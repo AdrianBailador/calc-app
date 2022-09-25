@@ -39,7 +39,13 @@ const App = () => {  // Función flecha o Arrow Function
                 r
             </button>
         </div>
-       <MathOperations />
+       <MathOperations onClickOperation={operation => 
+        console.log("Operation:", operation)
+        }
+        onClickEqual={equal =>
+            console.log("Equal:", equal)
+        }
+        />
     </main>)
     }
 
