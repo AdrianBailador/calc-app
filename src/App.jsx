@@ -2,6 +2,7 @@
 import React from "react";
 import Button from "./components/Button";
 import Result from "./components/Result";
+import MathOperations from "./components/MathOperations";
 import './App.css'
 
 
@@ -38,13 +39,7 @@ const App = () => {  // Función flecha o Arrow Function
                 r
             </button>
         </div>
-        <div className="math-operations">
-            <button>+</button>
-            <button>-</button>
-            <button>*</button>
-            <button>/</button>
-            <button>=</button>
-        </div>
+       <MathOperations />
     </main>)
     }
 
