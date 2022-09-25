@@ -15,7 +15,7 @@ const MathOperations = ({onClickOperation, onClickEqual}) => (
 
 
 // Validacines
-MathOperations.prototypes = {
+MathOperations.propTypes = {
     onClickOperation: PropTypes.func.isRequired,
     onClickEqual: PropTypes.func.isRequired
 }
