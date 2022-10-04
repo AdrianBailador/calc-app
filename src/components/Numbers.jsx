@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types'
-import './Button.css'
+import Button from './Button'
 
 const Numbers = ({onClickNumber}) => (
     <section className="numbers">
@@ -17,7 +17,7 @@ const Numbers = ({onClickNumber}) => (
     </section>
 )
 
-Numbers.PropTypes = {
+Numbers.propTypes = {
     onClickNumber: PropTypes.func.isRequired
 }
 
