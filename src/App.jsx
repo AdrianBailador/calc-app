@@ -53,7 +53,7 @@ const App = () => {  // Función flecha o Arrow Function
         }}
             onClickEqual={equal =>{
             console.log("Equal:", equal)
-            setStack(`${stack}${equal}`)
+            setStack(eval(stack).toString())
         }}
         />
     </main>)
