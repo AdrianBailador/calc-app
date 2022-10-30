@@ -13,6 +13,7 @@ const App = () => {  // Función flecha o Arrow Function
    
     // Array Destructuring
     //const arrayTextoFuncionModificaTexto = useState("")
+    // stack, variable que va a acumular lo que vamos escribiendo
 
     const [stack, setStack] = useState("")
 
@@ -29,7 +30,7 @@ const App = () => {  // Función flecha o Arrow Function
             <Result value={stack}/>        
             <Numbers onClickNumber={number => {
             console.log("Click en number", number)
-            setStack(number)
+            setStack(`${stack}${number}`)
         }} />
        <Functions 
             onContentClear={() => 
