@@ -1,4 +1,5 @@
 // importación
+/* eslint no-eval: 0 */
 import React, { useState } from "react";
 import Functions from "./components/Functions";
 import Numbers from "./components/Numbers";
