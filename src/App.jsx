@@ -33,21 +33,26 @@ const App = () => {  // Función flecha o Arrow Function
             setStack(`${stack}${number}`)
         }} />
        <Functions 
-            onContentClear={() => 
+            onContentClear={() => {
                 console.log("Content Clear")
+                setStack('')}
             }
-            onDelete={()=>
-                console.log("onDelete")   
-            }
+            onDelete={()=>{
+                console.log("onDelete")
+                const newStack = stack.substring(0, stack.length-1)
+                setStack(newStack)   
+            }}
        
        /> 
        <MathOperations 
-            onClickOperation={operation => 
+            onClickOperation={operation => {
             console.log("Operation:", operation)
-        }
-            onClickEqual={equal =>
+            setStack(`${stack}${operation}`)
+        }}
+            onClickEqual={equal =>{
             console.log("Equal:", equal)
-        }
+            setStack(`${stack}${equal}`)
+        }}
         />
     </main>)
     }
