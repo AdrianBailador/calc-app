@@ -38,10 +38,12 @@ const App = () => {  // Función flecha o Arrow Function
                 setStack('')}
             }
             onDelete={()=>{
-                console.log("onDelete")
-                const newStack = stack.substring(0, stack.length-1)
-                setStack(newStack)   
-            }}
+                if(stack.length > 0){
+                    console.log("onDelete")
+                    const newStack = stack.substring(0, stack.length-1)
+                    setStack(newStack)   
+            }
+        }}
        
        /> 
        <MathOperations 
