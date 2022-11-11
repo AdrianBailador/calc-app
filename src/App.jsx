@@ -1,6 +1,7 @@
 // importación
 /* eslint no-eval: 0 */
 import React, { useState } from "react";
+import words from 'lodash.words';
 import Functions from "./components/Functions";
 import Numbers from "./components/Numbers";
 import Result from "./components/Result";
@@ -18,6 +19,9 @@ const App = () => {  // Función flecha o Arrow Function
 
     const [stack, setStack] = useState("")
 
+    //array que contiene los números que el usuario va introduciendo
+    const items = words(stack, /[^-^+^*^/]+/g)
+
     // arrayTextoFuncionModificaTexto => ["hola", funcion]    
     // 1er posicion: valor (que inicialmente es el valor por defecto)
     //const texto = arrayTextoFuncionModificaTexto[0]
@@ -25,10 +29,14 @@ const App = () => {  // Función flecha o Arrow Function
     //const funcionModificaTexto = arrayTextoFuncionModificaTexto[1]
 
     // Lo que ejecuta la función
-    console.log("Renderización de App")
+    
+    const value = items.length > 0 ? items[items.length-1] : "0";
+
+    console.log("Renderización de App", value)
+    
     return (
         <main className='react-calculator'>
-            <Result value={stack}/>        
+            <Result value={value}/>        
             <Numbers onClickNumber={number => {
             console.log("Click en number", number)
             setStack(`${stack}${number}`)
